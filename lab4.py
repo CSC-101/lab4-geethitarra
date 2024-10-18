@@ -29,7 +29,6 @@ def are_in_positive_quadrant(list_of_points):
 
 # Part 4
 def distance(point1, point2):
-    return (point1.x)
 # Part 5
 
 
