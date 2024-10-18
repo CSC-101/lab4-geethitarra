@@ -2,7 +2,6 @@ from data import *
 import lab4
 import unittest
 
-
 # Write your test cases for each part below.
 
 class TestCases(unittest.TestCase):
