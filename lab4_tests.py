@@ -1,4 +1,4 @@
-import data
+from data import *
 import lab4
 import unittest
 
@@ -20,9 +20,45 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 2
+    def test_x_coordinates(self):
+        point1 = Point(4.0, 3.0)
+        point2 = Point(-3.0, 8)
+        point3 = Point(0, 0)
+        point4 = Point(0, 3)
+        point_list = [point1, point2, point3, point4]
+        result = lab4.x_coordinates(point_list)
+        expected = [4.0, -3.0, 0, 0]
+        self.assertEqual(expected, result)
 
+    def test_x_coordinates2(self):
+        point1 = Point(100.0, 0)
+        point2 = Point(0, 80)
+        point3 = Point(-10, -9)
+        point_list = [point1, point2, point3]
+        result = lab4.x_coordinates(point_list)
+        expected = [100.0, 0, -10]
+        self.assertEqual(expected, result)
 
     # Part 3
+    def test_are_in_positive_quadrant(self):
+        point1 = Point(4.0, 3.0)
+        point2 = Point(-3.0, 8)
+        point3 = Point(0, 0)
+        point4 = Point(0, 3)
+        point_list = [point1, point2, point3, point4]
+        result = lab4.are_in_positive_quadrant(point_list)
+        expected = [point1, point3, point4]
+        self.assertEqual(expected, result)
+
+    def test_are_in_positive_quadrant2(self):
+        point1 = Point(-4.0, -3.0)
+        point2 = Point(-3.0, 8)
+        point3 = Point(0, 0)
+        point4 = Point(0, 3)
+        point_list = [point1, point2, point3, point4]
+        result = lab4.are_in_positive_quadrant(point_list)
+        expected = [point3, point4]
+        self.assertEqual(expected, result)
 
     # Part 4
 
