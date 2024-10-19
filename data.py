@@ -6,9 +6,12 @@ class Point:
     # Initialize a new Point object.
     # input: x-coordinate as a float
     # input: y-coordinate as a float
+
     def __init__(self, x: float, y: float):
         self.x = x
         self.y = y
+
+
 
     #########
     #  You can ignore what follows for now. These are to aid in
