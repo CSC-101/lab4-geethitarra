@@ -36,6 +36,11 @@ def manhattan_distance(point1, point2):
     return (abs(point1.x - point2.x)) + (abs(point1.y - point2.y))
 
 # Part 6
+def distance_all(list):
+    return_list =[]
+    for data in list:
+        return_list.append(distance(Point (0,0), data))
+
 
 
 

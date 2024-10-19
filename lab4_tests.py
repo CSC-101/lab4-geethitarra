@@ -91,7 +91,21 @@ class TestCases(unittest.TestCase):
 
 
     # Part 6
+    def distance_all(self):
+        point1 = Point(1.0, 0.0)
+        point2 = Point(0, 0)
+        point_list = [point1, point2]
+        result = lab4.distance_all()
+        expected = 1
+        self.assertAlmostEqual(expected, result, 1)
 
+    def distance_all2(self):
+        point1 = Point(8.0, 0.0)
+        point2 = Point(10, 0)
+        point_list = [point1, point2]
+        result = lab4.distance_all()
+        expected = 8, 10
+        self.assertAlmostEqual(expected, result, 1)
 
 
 
