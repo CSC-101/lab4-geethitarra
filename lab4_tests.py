@@ -1,7 +1,7 @@
 from data import *
 import lab4
 import unittest
-
+import math
 # Write your test cases for each part below.
 
 class TestCases(unittest.TestCase):
@@ -60,9 +60,34 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 4
+    def test_distance(self):
+        point1 = Point(3.0, 4.0)
+        point2 = Point (0, 0)
+        result = lab4.distance(point1, point2)
+        expected = 5.65
+        self.assertAlmostEqual(expected, result, 1)
 
+    def test_distance2(self):
+        point1 = Point(0, 0)
+        point2 = Point(1, 0)
+        result = lab4.distance(point1, point2)
+        expected = 1
+        self.assertAlmostEqual(expected, result, 1)
 
     # Part 5
+    def manhattan_distance(self):
+        point1 = Point(0, 0)
+        point2 = Point(1, 0)
+        result = lab4.manhattan_distance(point1, point2)
+        expected = 1
+        self.assertAlmostEqual(expected, result, 1)
+
+    def manhattan_distance2(self):
+        point1 = Point(4, 0)
+        point2 = Point(18, 0)
+        result = lab4.manhattan_distance(point1, point2)
+        expected = 14
+        self.assertAlmostEqual(expected, result, 1)
 
 
     # Part 6

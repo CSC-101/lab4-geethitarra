@@ -1,5 +1,5 @@
 from data import Point
-
+import math
 # Write your functions for each part in the space below.
 
 # Part 1
@@ -29,10 +29,14 @@ def are_in_positive_quadrant(list_of_points):
 
 # Part 4
 def distance(point1, point2):
-# Part 5
+    return math.sqrt(((point2.x - point1.y)**2) + ((point2.y - point1.y)**2))
 
+# Part 5
+def manhattan_distance(point1, point2):
+    return (abs(point1.x - point2.x)) + (abs(point1.y - point2.y))
 
 # Part 6
+
 
 
 
